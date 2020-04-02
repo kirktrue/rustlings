@@ -12,6 +12,14 @@
 // Put your function here!
 // fn ..... {
 
+fn calculate_apple_price(initial: i32) -> i32 {
+    if initial <= 35 {
+        initial * 2
+    } else {
+        initial
+    }
+}
+
 // Don't modify this function!
 #[test]
 fn verify_test() {
