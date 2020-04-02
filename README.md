@@ -33,7 +33,13 @@ This will install Rustlings and give you access to the `rustlings` command. Run 
 
 ## Windows
 
-You can run:
+First, set `ExecutionPolicy` to `RemoteSigned`:
+
+```ps
+Set-ExecutionPolicy RemoteSigned
+```
+
+Then, you can run:
 
 ```ps
 Invoke-WebRequest https://git.io/rustlings-win | Select-Object -ExpandProperty Content | Out-File $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1
@@ -48,7 +54,7 @@ Basically: Clone the repository, checkout to the latest tag, run `cargo install`
 ```bash
 git clone https://github.com/rust-lang/rustlings
 cd rustlings
-git checkout tags/2.0.0 # or whatever the latest version is (find out at https://github.com/rust-lang/rustlings/releases/latest)
+git checkout tags/2.2.1 # or whatever the latest version is (find out at https://github.com/rust-lang/rustlings/releases/latest)
 cargo install --force --path .
 ```
 
